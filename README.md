@@ -1,5 +1,5 @@
 # TFChat
-腾讯大模型知识引擎(HTTP SSE)+飞书机器人(流式更新)实现AI智能助手
+腾讯大模型知识引擎(DeepSeek R1)+飞书机器人实现AI智能助手
 
 ### 腾讯大模型知识引擎>应用接口文档>对话端接口文档（HTTP SSE）
 https://cloud.tencent.com/document/product/1759/105561
