@@ -1,0 +1,5 @@
+httpx==0.23.0
+redis==5.0.4
+websockets==10.4
+sanic==22.9.0
+sanic-ext==22.9.0
