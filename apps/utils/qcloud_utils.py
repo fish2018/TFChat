@@ -25,7 +25,7 @@ async def call_tencent_ai_and_update_card(sender_id, card_id, element_id, conten
                 Config.TENCENT_AI_URL,
                 json=data,
                 headers={"Accept": "text/event-stream"},
-                timeout=10,  # 减少超时时间
+                timeout=20,  
             ) as response:
                 if response.status_code != 200:
                     logger.error(f"Failed to call Tencent AI API: {response.status_code}")
