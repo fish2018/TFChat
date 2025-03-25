@@ -12,7 +12,7 @@ class Config:
     # 腾讯 AI 接口配置
     TENCENT_AI_URL = "https://wss.lke.cloud.tencent.com/v1/qbot/chat/sse"
     BOT_APP_KEY = "xxx"
-    STREAMING_THROTTLE = 1
+    STREAMING_THROTTLE = 5
 
     # 飞书 API 配置
     FEISHU_API_URL = "https://open.feishu.cn/open-apis/message/v4/send/"
