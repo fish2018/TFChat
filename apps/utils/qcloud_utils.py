@@ -5,6 +5,7 @@ from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentClo
 from tencentcloud.common.common_client import CommonClient
 from qcloud_cos import CosConfig, CosS3Client
 from tencentcloud.common import credential
+from httpx_sse import aconnect_sse
 from sanic.log import logger
 import asyncio
 import httpx
@@ -92,7 +93,6 @@ async def call_tencent_ai_and_update_card(sender_id, card_id, element_id, conten
         "streaming_throttle": Config.STREAMING_THROTTLE,
     }
     sequence = 1
-    from httpx_sse import aconnect_sse
     try:
         async with httpx.AsyncClient(timeout=httpx.Timeout(60.0)) as client:
             async with aconnect_sse(
