@@ -1,6 +1,7 @@
 # -*- coding=utf-8
 from config.settings import Config
 from apps.utils.feishu_utils import update_card_content, disable_streaming_mode
+from apps.utils.session_utils import get_or_create_session
 from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
 from tencentcloud.common.common_client import CommonClient
 from qcloud_cos import CosConfig, CosS3Client
@@ -89,7 +90,7 @@ async def call_tencent_ai_and_update_card(sender_id, card_id, element_id, conten
         "content": content,
         "bot_app_key": Config.BOT_APP_KEY,
         "visitor_biz_id": sender_id,
-        "session_id": sender_id,
+        "session_id": await get_or_create_session(sender_id),
         "streaming_throttle": Config.STREAMING_THROTTLE,
     }
     sequence = 1
